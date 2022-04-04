@@ -18,9 +18,11 @@ export default {
    computed:{
    },
    methods:{
+       //点击完成事件的方法
        Checkdone(id){
            this.CheckTodo(id)
        },
+       //删除单个事项的方法
        DelItem(id){
           if(confirm('是否删除？')){
               this.DelTodo(id)

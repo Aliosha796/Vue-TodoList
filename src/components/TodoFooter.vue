@@ -14,6 +14,7 @@ export default {
    computed:{
    },
    methods:{
+      //删除全部事项的方法
       CleanAll(){
          if(confirm("确认全部删除？")){
             this.DeleteArray()

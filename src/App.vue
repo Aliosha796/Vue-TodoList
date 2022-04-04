@@ -20,31 +20,38 @@ export default{
         }
       },
       methods: {
+        //添加数据
           AddTodoItem(Item){
             this.Todos.unshift(Item)
             
           },
+          //标记完成
           CheckTodo(id){
+            //遍历Todos数组，并将done值取反
             this.Todos.forEach((todo) => {
               if(todo.id === id){
                 todo.done = !todo.done
               }
             })
           },
+          //删除单个列表事项
           DelTodo(id){
+            
               this.Todos = this.Todos.filter((todo) => {
                 return todo.id !== id
               })
 
           },
+          //一键删除所有事项
           DeleteArray(){
             this.Todos.splice(0)
           }
 
       },
       watch:{
+        //监视数据变化并存入浏览器
         Todos:{
-          deep:true,
+          deep:true,/* 深度监视开启 */
           handler(value){
             localStorage.setItem('Todos',JSON.stringify(value))
           }
