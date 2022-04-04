@@ -1,0 +1,111 @@
+<script>
+// This starter template is using Vue 3 <script setup> SFCs
+// Check out https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup
+import TodoHeader from './components/TodoHeader.vue'
+import TodoList from './components/TodoList.vue'
+import TodoFooter from './components/TodoFooter.vue'
+export default{
+      components:{
+        TodoHeader,TodoList,TodoFooter
+      },
+      data() {
+        return {
+          Todos:
+          JSON.parse(localStorage.getItem('Todos')) ||
+          [
+            {id:'001',title:'抽烟',done:false},
+            {id:'002',title:'喝酒',done:true},
+            {id:'003',title:'烫头',done:false},
+          ]
+        }
+      },
+      methods: {
+          AddTodoItem(Item){
+            this.Todos.unshift(Item)
+            
+          },
+          CheckTodo(id){
+            this.Todos.forEach((todo) => {
+              if(todo.id === id){
+                todo.done = !todo.done
+              }
+            })
+          },
+          DelTodo(id){
+              this.Todos = this.Todos.filter((todo) => {
+                return todo.id !== id
+              })
+
+          },
+          DeleteArray(){
+            this.Todos.splice(0)
+          }
+
+      },
+      watch:{
+        Todos:{
+          deep:true,
+          handler(value){
+            localStorage.setItem('Todos',JSON.stringify(value))
+          }
+        }
+      },
+
+
+}
+</script>
+
+<template>
+  <div class="container">
+    <div class="containerMain">
+      <TodoHeader :AddTodoItem="AddTodoItem"></TodoHeader>
+      <TodoList :Todos="Todos" :CheckTodo="CheckTodo" :DelTodo="DelTodo"></TodoList>
+      <TodoFooter :DeleteArray="DeleteArray"></TodoFooter>
+      </div>
+  </div>
+</template>
+
+<style>
+@font-face {
+  font-family: 'iconfont';  /* Project id 3291689 */
+  src: url('//at.alicdn.com/t/font_3291689_fefeq28qadd.woff2?t=1648999064622') format('woff2'),
+       url('//at.alicdn.com/t/font_3291689_fefeq28qadd.woff?t=1648999064622') format('woff'),
+       url('//at.alicdn.com/t/font_3291689_fefeq28qadd.ttf?t=1648999064622') format('truetype');
+}
+body{
+    margin: 0;
+    padding: 0;
+
+}
+.container{
+    text-align: center;
+    width:90%;
+    box-shadow: 0 2px 4px 0 rgb(0 0 0 / 20%), 0 2.5rem 5rem 0 rgb(0 0 0 / 10%);
+    margin: auto;
+    margin-top: 2%;
+    padding: 10px 0 10px 0;
+   
+    
+    
+}
+@media screen and (max-width: 400px) {
+  
+    .container{
+        width: 100%;
+        margin: 0;
+        
+    }
+    .containerMain{
+        width: 100%;
+    }
+    
+  }
+.containerMain{
+    margin: auto;
+    width: 90%;
+    
+    
+    
+
+}
+</style>
