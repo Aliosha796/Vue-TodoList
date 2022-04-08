@@ -36,7 +36,6 @@ export default{
           },
           //删除单个列表事项
           DelTodo(id){
-            
               this.Todos = this.Todos.filter((todo) => {
                 return todo.id !== id
               })

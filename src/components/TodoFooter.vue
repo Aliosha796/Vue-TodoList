@@ -18,6 +18,8 @@ export default {
       CleanAll(){
          if(confirm("确认全部删除？")){
             this.DeleteArray()
+         }else{
+            
          }
       }
    },

@@ -42,7 +42,6 @@ export default {
    border: #ccc 1px solid;
    font-size: 1.5em;
    box-sizing:border-box;
-    
 }
 
 #ListInput::placeholder{
