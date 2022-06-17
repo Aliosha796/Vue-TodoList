@@ -1,6 +1,4 @@
 <script>
-// This starter template is using Vue 3 <script setup> SFCs
-// Check out https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup
 import TodoHeader from './components/TodoHeader.vue'
 import TodoList from './components/TodoList.vue'
 import TodoFooter from './components/TodoFooter.vue'
@@ -13,9 +11,9 @@ export default{
           Todos:
           JSON.parse(localStorage.getItem('Todos')) ||
           [
-            {id:'001',title:'抽烟',done:false},
-            {id:'002',title:'喝酒',done:true},
-            {id:'003',title:'烫头',done:false},
+            {id:'001',title:'下午三点去打网球',done:false},
+            {id:'002',title:'晚上7点半去图书馆',done:true},
+            {id:'003',title:'睡前规划',done:false},
           ]
         }
       },
@@ -44,6 +42,7 @@ export default{
           //一键删除所有事项
           DeleteArray(){
             this.Todos.splice(0)
+            
           }
 
       },
@@ -56,6 +55,8 @@ export default{
           }
         }
       },
+      
+      
 }
 </script>
 

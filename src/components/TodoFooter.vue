@@ -1,7 +1,8 @@
 <template>
-    <span @click="CleanAll" :title="title">&#xe628;</span>
+   <span @click="CleanAll" :title="title">&#xe628;</span>
 </template>
 <script>
+
 export default {
    props:['DeleteArray'],
    data() {
@@ -10,6 +11,7 @@ export default {
       }
    },
    created(){
+      
    },
    computed:{
    },
@@ -24,14 +26,17 @@ export default {
       }
    },
 }
+
+
 </script>
 <style scoped>
-span{
+span {
    font-size: 1.5rem;
    font-family: 'iconfont';
    cursor: pointer;
 }
-span:hover{
+
+span:hover {
    color: red;
 }
 </style>
