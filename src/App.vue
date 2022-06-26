@@ -89,8 +89,6 @@ body{
     margin: auto;
     margin-top: 2%;
     padding: 10px 0 10px 0;
-   
-    
     
 }
 @media screen and (max-width: 400px) {
