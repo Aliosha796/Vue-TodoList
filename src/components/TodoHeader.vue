@@ -1,6 +1,6 @@
 <template>
   <h1>待办清单</h1>
-  <p style="font-size: 1em">有什么需要做的？</p>
+ <!--  <p style="font-size: 1em">有什么需要做的？</p> -->
   <input
     type="text"
     id="ListInput"

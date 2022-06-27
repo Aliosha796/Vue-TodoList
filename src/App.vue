@@ -81,13 +81,12 @@ export default {
 body {
   margin: 0;
   padding: 5vh;
-  /*  background: linear-gradient(
+  background: linear-gradient(
     to right,
     rgb(199, 210, 254),
     rgb(254, 202, 202),
     rgb(254, 249, 195)
-  ); */
-  background-color: #f5ded1;
+  );
 }
 
 .container {
