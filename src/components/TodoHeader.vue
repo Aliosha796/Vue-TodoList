@@ -1,10 +1,9 @@
 <template>
   <h1>待办清单</h1>
- <!--  <p style="font-size: 1em">有什么需要做的？</p> -->
   <input
     type="text"
     id="ListInput"
-    placeholder="请输入内容并回车添加，完成则点击事项"
+    placeholder="请输入内容并回车添加，完成则点击事项,需要修改实现则点击右侧修改按钮"
     @keyup.enter="addNewItem"
   />
 </template>
@@ -26,6 +25,7 @@ export default {
         id: nanoid(),
         title: InputList.target.value,
         done: false,
+        isEdit: false,
       };
       //如果输入的数据为空值则弹出警告框
       if (InputList.target.value === "") {

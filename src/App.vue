@@ -11,9 +11,9 @@ export default {
   data() {
     return {
       Todos: JSON.parse(localStorage.getItem("Todos")) || [
-        { id: "001", title: "下午三点去打网球", done: false },
-        { id: "002", title: "晚上7点半去图书馆", done: true },
-        { id: "003", title: "睡前规划", done: false },
+        { id: "001", title: "下午三点去打网球", done: false,isEdit:false },
+        { id: "002", title: "晚上7点半去图书馆", done: true ,isEdit:false },
+        { id: "003", title: "睡前规划", done: false ,isEdit:false },
       ],
     };
   },
@@ -69,15 +69,6 @@ export default {
 </template>
 
 <style>
-@font-face {
-  font-family: "iconfont"; /* Project id 3291689 */
-  src: url("//at.alicdn.com/t/font_3291689_fefeq28qadd.woff2?t=1648999064622")
-      format("woff2"),
-    url("//at.alicdn.com/t/font_3291689_fefeq28qadd.woff?t=1648999064622")
-      format("woff"),
-    url("//at.alicdn.com/t/font_3291689_fefeq28qadd.ttf?t=1648999064622")
-      format("truetype");
-}
 body {
   margin: 0;
   padding: 5vh;
