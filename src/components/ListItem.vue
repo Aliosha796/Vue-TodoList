@@ -96,9 +96,9 @@ export default {
   border-top: 0;
   border-left: 0;
   border-right: 0;
-  border-bottom: 1px #000 solid;
   outline: 0;
   height: 100%;
+  border: 0;
   background-color: rgba(255, 255, 255, 0);
   font-size: 1.2em;
   margin-left: 20px;
