@@ -3,7 +3,7 @@
   <input
     type="text"
     id="ListInput"
-    placeholder="请输入内容并回车添加，完成则点击事项,需要修改实现则点击右侧修改按钮"
+    placeholder="请输入事项"
     @keyup.enter="addNewItem"
   />
 </template>
@@ -43,14 +43,18 @@ export default {
 #ListInput {
   width: 100%;
   height: 40px;
-  border: #ccc 1px solid;
   font-size: 1.5em;
+  border: 0;
+  border-bottom: 3px #fff solid;
+  background-color: rgba(255, 255, 255, 0);
   box-sizing: border-box;
-  border-radius: 10px;
   padding: 1vw;
+  outline: none;
+  color: #fff;
 }
 
 #ListInput::placeholder {
+  color: #fff;
   font-size: 0.7em;
 }
 </style>

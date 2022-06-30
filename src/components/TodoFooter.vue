@@ -32,7 +32,9 @@ export default {
 };
 </script>
 <style scoped>
-span {
+span,
+p {
+  color: #fff;
   font-size: 1.5rem;
   font-family: "iconfont";
   cursor: pointer;

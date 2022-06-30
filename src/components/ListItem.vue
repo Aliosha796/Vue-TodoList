@@ -76,9 +76,12 @@ export default {
   list-style: none;
   display: flex;
   align-items: stretch;
-  background-color: rgb(233, 233, 233);
+  background-color: rgba(255, 255, 255, 0.6);
+  margin-top: 5px;
+  backdrop-filter: blur(30px);
   letter-spacing: 2px;
-  border-bottom: #000 2px dashed;
+  border: 0;
+  border-radius: 10px;
 }
 
 #doingThings li:hover {

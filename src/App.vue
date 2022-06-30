@@ -11,9 +11,14 @@ export default {
   data() {
     return {
       Todos: JSON.parse(localStorage.getItem("Todos")) || [
-        { id: "001", title: "下午三点去打网球", done: false,isEdit:false },
-        { id: "002", title: "晚上7点半去图书馆", done: true ,isEdit:false },
-        { id: "003", title: "睡前规划", done: false ,isEdit:false },
+        { id: "001", title: "30分钟力量训练", done: false, isEdit: false },
+        { id: "002", title: "看一篇英语文章", done: true, isEdit: false },
+        {
+          id: "003",
+          title: "学20分钟口琴",
+          done: false,
+          isEdit: false,
+        },
       ],
     };
   },
@@ -66,20 +71,27 @@ export default {
       <TodoFooter :Todos="Todos" :DeleteArray="DeleteArray"></TodoFooter>
     </div>
   </div>
+  <img
+    src="https://w.wallhaven.cc/full/z8/wallhaven-z8e8qy.jpg"
+    class="background"
+    alt=""
+  />
 </template>
 
 <style>
 body {
   margin: 0;
   padding: 5vh;
-  background: linear-gradient(
+  /* background: linear-gradient(
     to right,
     rgb(199, 210, 254),
     rgb(254, 202, 202),
     rgb(254, 249, 195)
-  );
+  ); */
 }
-
+h1 {
+  color: #fff;
+}
 .container {
   text-align: center;
   width: 80%;
@@ -87,7 +99,8 @@ body {
   margin: auto;
   padding: 10px 0 10px 0;
   border-radius: 20px;
-  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
 }
 @media screen and (max-width: 400px) {
   body {
@@ -105,5 +118,14 @@ body {
 .containerMain {
   margin: auto;
   width: 90%;
+}
+.background {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  object-fit: cover;
+  top: 0;
+  left: 0;
+  z-index: -999;
 }
 </style>
