@@ -71,11 +71,7 @@ export default {
       <TodoFooter :Todos="Todos" :DeleteArray="DeleteArray"></TodoFooter>
     </div>
   </div>
-  <img
-    src="https://w.wallhaven.cc/full/z8/wallhaven-z8e8qy.jpg"
-    class="background"
-    alt=""
-  />
+  <img src="./assets/img/background.jpg" class="background" alt="" />
 </template>
 
 <style>
